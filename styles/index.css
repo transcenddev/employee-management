@@ -1,0 +1,55 @@
+:root {
+  --ff-body: 'Inter', sans-serif;
+  --ff-heading: "myfont", sans-serif;
+
+  --fw-300: 300;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fs-xsml: 0.7rem;
+  --fs-sml: 0.9rem;
+  --fs-md: 1rem;
+  --fs-lg: 3rem;
+
+  --main-bg-color: #181818;
+  --clr-accent: #7c07c0;
+  --clr-light: #fff;
+  --clr-info: #666;
+  --clr-dark: #111;
+}
+
+@font-face {
+  font-family: "myfont";
+  src: url('../assets//font/wulkan-display-2-0-font/Wulkan-Display-Medium.otf') format('woff');
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--clr-light);
+  font-family: var(--ff-body);
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.dashboard__title {
+  font-family: var(--ff-heading);
+}
+
+.primary-btn {
+  background: var(--clr-accent);
+  color: var(--clr-light);
+  padding: 0.5rem 1rem;
+  margin: 1em 0;
+  text-decoration: none;
+  transform: all 300ms ease-in-out;
+}
+
+.primary-btn:hover {
+  opacity: 0.7;
+}

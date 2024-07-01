@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+  --ff-body: 'Inter', sans-serif;
+  --ff-heading: "myfont", sans-serif;
+
+  --fw-300: 300;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fs-xsml: 0.7rem;
+  --fs-sml: 0.9rem;
+  --fs-md: 1rem;
+  --fs-lg: 3rem;
+
+  --main-bg-color: #181818;
+  --clr-accent: #7c07c0;
+  --clr-light: #fff;
+  --clr-info: #ccc;
+  --clr-dark: #111;
+  --clr-success: #28a745;
+  --clr-alert: #c82333;
+}
+
+@font-face {
+  font-family: "myfont";
+  src: url('../assets/font/wulkan-display-2-0-font/Wulkan-Display-Medium.otf') format('woff');
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-300);
+  background-color: var(--main-bg-color);
+  color: var(--clr-light);
+  overflow: hidden;
+}
+
+.error {
+  color: var(--clr-alert);
+  margin: 1em 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.left {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.right {
+  flex: 2;
+}
+
+.primary-btn {
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  border: none;
+  cursor: pointer;
+  transition: opacity 300ms ease-in-out;
+}
+
+.primary-btn:hover {
+  opacity: 0.7;
+}
+
+/* signin */
+
+.logo {
+  width: 100px;
+}
+
+.signin {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+
+.signin .form__title {
+
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.signin .logo-container {
+  margin-bottom: 8vh;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.signin label {
+  font-size: var(--fs-md);
+  line-height: 2rem;
+}
+
+.signin .text-input {
+  background: var(--main-bg-color);
+  color: var(--clr-light);
+  border: 1px solid var(--clr-info);
+
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.3rem;
+  line-height: 1.3rem;
+}
+
+.form__links {
+  color: var(--clr-accent);
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 1em 0;
+}
+
+.bottom-text {
+  gap: 0.5em;
+  position: absolute;
+  bottom: 60px;
+}
+
+input[type=checkbox] {
+  accent-color: var(--clr-dark);
+}
+
+/* Showcase */
+
+.showcase-container {
+  background: url("../assets/img/background.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+.showcase-content {
+  color: var(--clr-light);
+  width: 40vw;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.showcase__title {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 70rem) {
+  .left {
+    flex: 2;
+  }
+
+  .right {
+    flex: 3;
+  }
+}
+
+@media (min-width: 51rem) and (max-width: 69rem) {
+  .left {
+    flex: 1;
+  }
+
+  .right {
+    flex: 1;
+  }
+}
+
+
+@media (max-width:50rem) {
+  body {
+    overflow: auto;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .left {
+    justify-content: center;
+  }
+
+  .signin .logo {
+    margin-bottom: 2vh;
+  }
+
+  .signin .text-input {
+    margin-bottom: 0.7em;
+  }
+
+  .main-footer {
+    padding-top: 1rem;
+  }
+}

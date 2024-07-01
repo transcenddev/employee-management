@@ -1,0 +1,75 @@
+/* Global Variables */
+:root {
+  --ff-body: 'Inter', sans-serif;
+  --ff-heading: "myfont", sans-serif;
+
+  --fw-300: 300;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fs-xsml: 0.7rem;
+  --fs-sml: 0.9rem;
+  --fs-md: 1rem;
+  --fs-lg: 3rem;
+
+  --main-bg-color: #181818;
+  --main-bg-color-100: #1f1f1f;
+  --clr-accent: #7c07c0;
+  --clr-light: #fff;
+  --clr-info: #666;
+  --clr-dark: #111;
+}
+
+@font-face {
+  font-family: "myfont";
+  src: url('../assets//font/wulkan-display-2-0-font/Wulkan-Display-Medium.otf') format('woff');
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--clr-light);
+  font-family: var(--ff-body);
+}
+
+/* Utilities */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 120px 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--clr-accent);
+  color: var(--clr-light);
+  padding: 0.5rem 1rem;
+  margin: 1em 0;
+  text-decoration: none;
+  transform: all 300ms ease-in-out;
+}
+
+.primary-btn:hover {
+  opacity: 0.7;
+}
+
+/* Dashboard */
+
+.dashboard {
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard__title {
+  font-family: var(--ff-heading);
+}
+
+/* table */
+
